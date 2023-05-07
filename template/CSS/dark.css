@@ -1,0 +1,96 @@
+body {
+   color: #ddd;
+   background-color: rgb(9, 16, 22);
+}
+
+.header {
+   background-color: rgb(9, 16, 22);
+}
+
+.headline {
+   background-color: rgb(9, 16, 22);
+}
+
+.headline-img {
+   border: 1px solid transparent;
+}
+
+.logo {
+   border: 1px solid transparent;
+}
+
+.logo-img.dark {
+   display: none;
+}
+
+.logo-img.light {
+   display: inherit;
+}
+
+.menu-link {
+   color: #ddd;
+}
+
+@media (max-width: 1020px) {
+   .header {
+      background-color: rgb(9, 16, 22);
+   }
+
+   .header_burger span {
+      background-color: #ddd;
+   }
+
+   .header_burger:before,
+   .header_burger:after {
+      background-color: #ddd;
+   }
+
+   .menu {
+      background-color: rgb(9, 16, 22);
+   }
+}
+
+.skills {
+   background-color: #30474d;
+}
+
+.skill {
+   background-color: #30474d;
+}
+
+.works {
+   background-color: #091016;
+}
+
+.form-control {
+   background-color: #30474d;
+}
+
+input.form-control::placeholder,
+textarea.form-control::placeholder {
+   color: #ddd;
+}
+
+input.form-control::-webkit-input-placeholder,
+textarea.form-control::placeholder {
+   color: #ddd;
+}
+
+input.form-control:-moz-placeholder,
+textarea.form-control::placeholder {
+   color: #ddd;
+}
+
+input.form-control::-moz-placeholder,
+textarea.form-control::placeholder {
+   color: #ddd;
+}
+
+input.form-control:-ms-input-placeholder,
+textarea.form-control::placeholder {
+   color: #ddd;
+}
+
+.footer {
+   background-color: rgb(9, 16, 22);
+}
