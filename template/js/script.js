@@ -26,3 +26,20 @@ checkbox.onchange = function () {
     dark.setAttribute("href", "#");
   }
 };
+
+if (localStorage.getItem("checked_elem") !== null) {
+  let elem = $(".menu .menu-item .check_this");
+  elem[0].classList.remove("check_this");
+  let checked_elem = $(
+    "a:contains('" + localStorage.checked_elem.trim() + "')"
+  );
+  checked_elem[0].classList.add("check_this");
+  delete localStorage.checked_elem;
+}
+
+let element_arr = $(".menu .menu-item");
+for (let i = 0; i < element_arr.length; i++) {
+  element_arr[i].addEventListener("click", function () {
+    localStorage.setItem("checked_elem", this.textContent);
+  });
+}

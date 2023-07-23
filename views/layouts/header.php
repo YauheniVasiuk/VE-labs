@@ -31,7 +31,7 @@
                </div>
                <ul class="menu">
                   <li class="menu-item">
-                     <a href="/" class="menu-link" style="color: #FF6464;">Main</a>
+                     <a href="/" class="menu-link check_this">Main</a>
                   </li>
                   <li class="menu-item">
                      <a href="/works/" class="menu-link">Works</a>

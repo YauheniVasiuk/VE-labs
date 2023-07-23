@@ -149,6 +149,10 @@ body {
    background-color: #6088d7;
 }
 
+.check_this {
+   color: #FF6464 !important;
+}
+
 @media (max-width: 1020px) {
    body.lock {
       overflow: hidden;
