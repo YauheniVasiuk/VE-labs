@@ -1,4 +1,7 @@
 <?php
 return array(
-   'general' => 'general/index'
+   'works' => 'works/work',
+   'skills' => 'skills/skill',
+   'contacts' => 'contacts/contact',
+   '' => 'general/index',
 );
