@@ -2,7 +2,6 @@
 
 class Works
 {
-
    public static function getWorksList()
    {
       // Подключение БД
