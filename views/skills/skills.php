@@ -15,6 +15,20 @@
                   <?php else : ?>
                      <img src="/template/images/<?php echo (strtolower($skillsItem['title'])) ?>.svg" alt="<?php echo ($skillsItem['title']) ?>" class="skills-img">
                   <?php endif; ?>
+
+                  BY
+
+                  Пропустить
+                  Введите запрос
+
+
+
+
+                  9+
+
+                  Фото профиля
+                  25/27
+                  PHP Start | Практика: Урок 6.
                   <div class="line-wrapper ">
                      <div class="description-wrapper <?php echo (strtolower($skillsItem['title'])) ?>">
                         <div class="description-title"><?php echo $skillsItem['title'] ?></div>

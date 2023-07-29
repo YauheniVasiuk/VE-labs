@@ -19,7 +19,7 @@
             </li>
          </ul>
       </div>
-      <div class="copy-right">Copyright ©2023 All rights reserved</div>
+      <div id="logo-img" class="copy-right">Copyright ©2023 All rights reserved</div>
    </div>
 </footer>
 

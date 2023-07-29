@@ -4,6 +4,18 @@ $(document).ready(function () {
     $(".logo").toggleClass("active");
     $("body").toggleClass("lock");
   });
+  if (
+    sessionStorage.getItem("errors_contact") !== null &&
+    sessionStorage.getItem("errors_contact") == "true"
+  ) {
+    $("body,html").animate(
+      {
+        scrollTop:
+          $(document).height() - $(window).height() - $(window).scrollTop(),
+      },
+      500
+    );
+  }
 });
 
 dark.setAttribute("href", "#");
@@ -16,10 +28,10 @@ if (localStorage.getItem("theme") == "true") {
 
 checkbox.onchange = function () {
   if (this.checked) {
-    localStorage.setItem("theme", true);
+    localStorage.setItem("theme", "true");
     dark.setAttribute("href", "/template/CSS/dark.CSS");
   } else {
-    localStorage.setItem("theme", false);
+    localStorage.setItem("theme", "false");
     dark.setAttribute("href", "#");
   }
 };
@@ -54,4 +66,24 @@ for (let i = 0; i < elements_skill.length; i++) {
   let item_style = text_skill.split("\n");
   items_skill[0].style.width = item_style[1];
   items_skill[1].style.width = item_style[1];
+}
+
+let line_classes = $(".skill-item");
+for (let i = 0; i < line_classes.length; i++) {
+  if (
+    line_classes[i].childNodes[1].alt == "JavaScript" ||
+    line_classes[i].childNodes[1].alt == "HTML" ||
+    line_classes[i].childNodes[1].alt == "MySQL" ||
+    line_classes[i].childNodes[1].alt == "Figma"
+  ) {
+    line_classes[i].insertAdjacentHTML(
+      "beforebegin",
+      "<div class='line'></div>"
+    );
+  }
+}
+
+let elem_cont = $(".menu-link.check_this").text();
+if (elem_cont == "Contact") {
+  $("div .social").remove();
 }

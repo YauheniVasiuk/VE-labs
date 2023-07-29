@@ -2,6 +2,6 @@
 return array(
    'works' => 'works/work',
    'skills' => 'skills/skill',
-   'contacts' => 'contacts/contact',
+   'contacts' => 'general/contact',
    '' => 'general/index',
 );
