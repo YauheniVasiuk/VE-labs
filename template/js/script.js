@@ -4,18 +4,6 @@ $(document).ready(function () {
     $(".logo").toggleClass("active");
     $("body").toggleClass("lock");
   });
-  if (
-    sessionStorage.getItem("errors_contact") !== null &&
-    sessionStorage.getItem("errors_contact") == "true"
-  ) {
-    $("body,html").animate(
-      {
-        scrollTop:
-          $(document).height() - $(window).height() - $(window).scrollTop(),
-      },
-      500
-    );
-  }
 });
 
 dark.setAttribute("href", "#");
@@ -43,7 +31,6 @@ if (sessionStorage.getItem("checked_elem") !== null) {
     "a:contains('" + sessionStorage.checked_elem.trim() + "')"
   );
   checked_elem[0].classList.add("check_this");
-  // delete sessionStorage.checked_elem;
 }
 
 let element_arr = $(".menu .menu-item");
@@ -87,3 +74,11 @@ let elem_cont = $(".menu-link.check_this").text();
 if (elem_cont == "Contact") {
   $("div .social").remove();
 }
+
+let offsetTop = $("#contactId")[0].getBoundingClientRect().top;
+$("body,html").animate(
+  {
+    scrollTop: offsetTop,
+  },
+  500
+);

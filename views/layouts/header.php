@@ -11,7 +11,7 @@
    <link rel="stylesheet" href="/template/CSS/style.CSS">
    <link rel="stylesheet" href="/template/CSS/dark.CSS" id="dark">
    <link rel="icon" href="/template/images/icon.svg" type="image/x-icon">
-   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+   <script src="../../template/js/code.jquery.com_jquery-3.7.0.min.js"></script>
    <title>VE-labs</title>
 </head>
 
@@ -40,27 +40,12 @@
                      <a href="/skills/" class="menu-link">Skills</a>
                   </li>
                   <li class="menu-item">
+                     <a href="/chat/" class="menu-link">Chat</a>
+                  </li>
+                  <li class="menu-item">
                      <a href="/contacts/" class="menu-link">Contact</a>
                   </li>
                </ul>
             </nav>
          </div>
       </header>
-
-      <main class="main contact-main">
-         <section class="headline">
-            <div class="container">
-               <div class="wrapper">
-                  <img src="/template/images/photo.png" alt="photo" class="headline-img-small">
-                  <div class="description">
-                     <h1 class="title">Hi, I am Женя, <br> Креативный web Developer</h1>
-                     <p>Не полохо разработываю back и front. Увлеченно работаю над новыми проектами, <br>
-                        постоянно самосовершенствуюсь, прекрасно дополняю интересную команду и <br>
-                        стремлюсь к новым свершениям!
-                     </p>
-                     <a href="/template/images/resume.pdf" class="headline-btn" target="_blank">Download Resume</a>
-                  </div>
-                  <img src="/template/images/photo.png" alt="photo" class="headline-img">
-               </div>
-            </div>
-         </section>

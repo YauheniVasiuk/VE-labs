@@ -1,20 +1,14 @@
 <?php include(ROOT . '/views/layouts/header.php') ?>
-<script>
-   sessionStorage.setItem("errors_contact", 'false');
-</script>
 <main class="main contact-main">
    <div class="container">
       <?php if ($result) : ?>
-         <div style="text-align: center; margin: 50px 0 50px 0;">
+         <div style="text-align: center; margin: 100px 0 0 0;">
             <p><b>Сообщение отправлено. Я обязательно с вами свяжусь!</b></p>
          </div>
       <?php else : ?>
-         <h1 class="text-center text-uppercase title-contact">Contact</h1>
+         <h1 id="contactId" class="text-center text-uppercase title-contact">Contact</h1>
          <?php if (isset($errors)) : ?>
             <p>- <?php echo $errors ?></p>
-            <script>
-               sessionStorage.setItem("errors_contact", 'true');
-            </script>
          <?php endif; ?>
          <div class="col-lg-12 mt-lg-5 mb-lg-5 mb-sm-3 location-big">
             <div class="col-lg-10 col-sm-12">
