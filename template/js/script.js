@@ -73,12 +73,11 @@ for (let i = 0; i < line_classes.length; i++) {
 let elem_cont = $(".menu-link.check_this").text();
 if (elem_cont == "Contact") {
   $("div .social").remove();
+  let offsetTop = $("#contactId")[0].getBoundingClientRect().top;
+  $("body,html").animate(
+    {
+      scrollTop: offsetTop,
+    },
+    500
+  );
 }
-
-let offsetTop = $("#contactId")[0].getBoundingClientRect().top;
-$("body,html").animate(
-  {
-    scrollTop: offsetTop,
-  },
-  500
-);
