@@ -8,29 +8,38 @@
 
       // create anonymous users
       var c = "rgb(" + n() + ", " + n() + "," + n() + ")";
-      var template = "<strong style='color: " + c + "; margin-bottom: 5px;'>" + 'user_' + n() + "</strong>: ";
+      let s = n();
+      var template = "<strong style='color: " + c + "'>" + 'anonimus_' + s + "</strong>: ";
 
       // listener
       comet.connect(function(data) {
-         $("#history").append(data.message) + "<br>";
+         if (data.message.match(new RegExp(`anonimus_${s}`))) {
+            $("#history").append('<div style="text-align: right; margin: 5px;">' + data.message) + "</div>";
+         } else {
+            $("#history").append('<div style="margin: 5px;">' + data.message);
+         }
+
+
       });
 
       // sender
       var send = function() {
          comet.doRequest({
-            message: template + $("#message").val() + "<br>"
+            message: template + $("#message").val() + "</dii>"
          }, function() {
             $("#message").val('').focus();
          })
       }
    </script>
 
-   <div style="display: flex; flex-direction: column;justify-items: center;justify-content: center;align-items: center;flex-wrap: nowrap;align-content: center;">
-      <div class="col-sm-4 mb-3">
-         <input type="text" autofocus id="message" placeholder="your message!" class="form-control form-control-lg ">
+   <div class="container">
+      <div style="display: flex; flex-direction: column;justify-items: center;justify-content: center;align-items: center;flex-wrap: nowrap;align-content: center;">
+         <div class="col-sm-4 mb-3">
+            <input type="text" autofocus id="message" placeholder="your message!" class="form-control form-control-lg ">
+         </div>
+         <button onclick="send()" class="col-lg-1 btn btn-primary btn-lg send">Send</button><br><br>
+         <div id="history" style="width: 60%;"></div>
       </div>
-      <button onclick="send()" class="col-lg-1 btn btn-primary btn-lg send">Send</button><br><br>
-      <div id="history"></div>
    </div>
 
 </main>
