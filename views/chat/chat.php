@@ -14,18 +14,16 @@
       // listener
       comet.connect(function(data) {
          if (data.message.match(new RegExp(`anonimus_${s}`))) {
-            $("#history").append('<div style="text-align: right; margin: 5px;">' + data.message) + "</div>";
+            $("#history").append('<div class="chat-out"><div class="chat-out-item">' + data.message + '</div>') + "</div>";
          } else {
-            $("#history").append('<div style="margin: 5px;">' + data.message);
+            $("#history").append('<div class="chat-in"><div class="chat-in-item">' + data.message + '</div>') + "</div>";
          }
-
-
       });
 
       // sender
       var send = function() {
          comet.doRequest({
-            message: template + $("#message").val() + "</dii>"
+            message: template + $("#message").val()
          }, function() {
             $("#message").val('').focus();
          })
@@ -33,12 +31,12 @@
    </script>
 
    <div class="container">
-      <div style="display: flex; flex-direction: column;justify-items: center;justify-content: center;align-items: center;flex-wrap: nowrap;align-content: center;">
-         <div class="col-sm-4 mb-3">
-            <input type="text" autofocus id="message" placeholder="your message!" class="form-control form-control-lg ">
+      <div class="chat-text">
+         <div class="col-lg-4 col-12 mb-3">
+            <input type="text" autofocus id="message" placeholder="Your message!" class="form-control form-control-lg message">
          </div>
          <button onclick="send()" class="col-lg-1 btn btn-primary btn-lg send">Send</button><br><br>
-         <div id="history" style="width: 60%;"></div>
+         <div id="history"></div>
       </div>
    </div>
 
